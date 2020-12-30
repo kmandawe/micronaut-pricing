@@ -2,6 +2,8 @@ package com.kensbunker.micronaut;
 
 import com.kensbunker.micronaut.quotes.external.ExternalQuote;
 import com.kensbunker.micronaut.quotes.external.ExternalQuoteProducer;
+import io.micronaut.context.annotation.Requires;
+import io.micronaut.context.env.Environment;
 import io.micronaut.scheduling.annotation.Scheduled;
 import java.math.BigDecimal;
 import java.util.Arrays;
@@ -12,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @Singleton
+@Requires(notEnv = Environment.TEST)
 public class EventScheduler {
 
   private static final Logger LOG = LoggerFactory.getLogger(EventScheduler.class);
