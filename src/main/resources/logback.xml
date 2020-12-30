@@ -9,7 +9,7 @@
     </encoder>
   </appender>
 
-  <logger name="com.danielprinz.udemy" level="DEBUG" />
+  <logger name="com.kensbunker.micronaut" level="DEBUG" />
 
   <root level="info">
     <appender-ref ref="STDOUT"/>
